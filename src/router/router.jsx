@@ -3,7 +3,10 @@ import App from "../App";
 import Home from "../pages/Home";
 import About from "../pages/About";
 import Contact from "../pages/Contact";
-import User from "../pages/Pages";
+import User from "../pages/User"
+import Login from "../pages/Login";
+import NotFound from "../pages/NotFound";
+
 const router = createBrowserRouter([
   {
     path: "/",
@@ -21,7 +24,14 @@ const router = createBrowserRouter([
         path: "contact", // no leading /
         element: <Contact />,
       },
+
+            { path: "login", element: <Login /> },
+
+
             { path: "user/:id", element: <User /> },
+            { path: "*", element: <NotFound /> },
+
+
 
     ],
   },

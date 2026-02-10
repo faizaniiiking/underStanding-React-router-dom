@@ -31,7 +31,10 @@ const Navbar = () => {
         Contact
       </NavLink>
       
-            <NavLink to="/user/101">User 101</NavLink>
+            <NavLink  className= "m-6" to="/user/101">User 101</NavLink>
+                  <NavLink to="/login">Login</NavLink>
+
+
 
     </nav>
   );
