@@ -3,7 +3,7 @@ import App from "../App";
 import Home from "../pages/Home";
 import About from "../pages/About";
 import Contact from "../pages/Contact";
-
+import User from "../pages/Pages";
 const router = createBrowserRouter([
   {
     path: "/",
@@ -21,6 +21,8 @@ const router = createBrowserRouter([
         path: "contact", // no leading /
         element: <Contact />,
       },
+            { path: "user/:id", element: <User /> },
+
     ],
   },
 ]);

@@ -1,18 +1,40 @@
-import React from 'react'
-import { Link } from 'react-router-dom'
+import React from "react";
+import { NavLink } from "react-router-dom";
+
 const Navbar = () => {
   return (
-    <div>
-        <nav className='flex items-center'>
-          <Link className="mr-6" to="/">Home</Link>
-<Link className="mr-6" to="/about">About</Link>
-<Link to="/contact">Contact</Link>
+    <nav className="flex items-center">
+      <NavLink
+        to="/"
+        className={({ isActive }) =>
+          `mr-6 ${isActive ? "text-blue-600 font-bold" : ""}`
+        }
+      >
+        Home
+      </NavLink>
 
+      <NavLink
+        to="/about"
+        className={({ isActive }) =>
+          `mr-6 ${isActive ? "text-blue-600 font-bold" : ""}`
+        }
+      >
+        About
+      </NavLink>
 
-        </nav>
+      <NavLink
+        to="/contact"
+        className={({ isActive }) =>
+          isActive ? "text-blue-600 font-bold" : ""
+        }
+      >
+        Contact
+      </NavLink>
       
-    </div>
-  )
-}
+            <NavLink to="/user/101">User 101</NavLink>
 
-export default Navbar
+    </nav>
+  );
+};
+
+export default Navbar;
